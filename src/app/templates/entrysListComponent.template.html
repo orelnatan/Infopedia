@@ -1,0 +1,16 @@
+
+<div id = "mainWrapper" > 
+
+    <div id = "listWrapper"  (click) = "print()" >
+
+        <div id = "entryDiv" *ngFor = "let entry of entrysList"  > 
+
+            <div id = "entryNameDiv" >  <label id = "entryNameElement" > {{entry.entryTitle}}       </label>  </div>
+            <div id = "entryDescDiv" >  <label id = "entryDiscElement" > {{entry.entryDescription}} </label>  </div>
+
+        </div>
+
+    </div>
+
+
+</div>

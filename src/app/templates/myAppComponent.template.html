@@ -1,0 +1,25 @@
+
+
+<div id = "mainWrapper" >
+
+    <div id = "headerDiv" >
+
+        <div id = "headerImgDiv" > <label id = "headerImgElement"  [ngStyle] = "{'background-image': 'url(' + notifications.searchImgUrl + ')'}" >   </label> </div>
+
+        <div id = "headerUserPanelDiv" >
+
+            <div id = "headerTitleDiv" > <label id = "headerTitleElement" >  {{notifications.titleText}}  </label>     </div>
+
+            <div id = "headerInputDiv" > <input id = "headerInputBox"  placeholder = {{notifications.boxHolderText}}  (keyup) = 'getUserInput(inputBoxRef)'  #inputBoxRef >  </div>
+
+        </div>
+
+    </div>
+
+    <div id = "entrysListComponentDiv" >
+
+        <entrys-list  [entrysList] = 'entrys'  > </entrys-list>
+
+    </div>
+
+</div>

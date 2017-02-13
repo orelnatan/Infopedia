@@ -1,0 +1,97 @@
+
+#mainWrapper{
+
+    background-color: transparent;
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+#headerDiv{
+
+    background-color: transparent;
+
+    display: flex;
+    flex-direction: row;
+    flex-basis: 130px;
+    justify-content: center;
+
+    padding-top: 18px;
+    margin-top: 5%;
+    
+    border-bottom: solid;
+    border-bottom-color: #eee;
+}
+
+
+#headerImgDiv{
+
+    background-color: transparent;
+
+    display: flex;
+    flex-basis: 100px;
+    flex-shrink: 0;
+
+}
+
+
+#headerImgElement{
+
+    width: 100%;
+
+    background-size: 80% 80%;
+    background-repeat: no-repeat;
+
+}
+
+
+#headerUserPanelDiv{
+
+    background-color: transparent;
+
+    display: flex;
+    flex-direction: column;
+    flex-basis: 600px;
+    flex-shrink: 0;
+
+    margin-left: 20px;
+}
+
+
+#headerTitleDiv{
+
+    padding-bottom: 15px;
+    margin-bottom: 10px;
+    
+    border-bottom: solid;
+    border-bottom-color: gray;
+
+}
+
+
+#headerTitleElement{
+
+    font-family: Verdana, Geneva, sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+
+}
+
+
+#headerInputBox{
+
+    height: 25px;
+    width: 200px;
+
+    padding-left: 5px;
+
+}
+
+
+#entrysListComponentDiv{
+
+
+    
+}
