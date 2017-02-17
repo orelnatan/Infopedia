@@ -1,0 +1,152 @@
+
+
+#mainWrapper{
+
+    background-color: transparent;
+
+    display: flex;
+    flex-direction: column;
+
+    margin: 50px;
+
+}
+
+
+#headerDiv{
+
+    background-color: transparent;
+
+    display: flex;
+    flex-basis: 50px;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+
+#titleDiv{
+
+    background-color: transparent;
+
+    display: flex;
+    flex-shrink: 0;
+    
+}
+
+
+#titleElement{
+
+   background-color: transparent;
+   color: blue;
+
+   font-family: Verdana, Geneva, sans-serif;
+   font-weight: bold;
+   font-size: 25px;
+
+}
+
+
+#optionsDiv{
+
+    background-color: transparent;
+
+    display: flex;
+    flex-direction: row;
+    flex-shrink: 0;
+
+    margin-top: 10px;
+    margin-left: 20px;
+
+}
+
+
+#optionBox{
+
+    margin-left: 10px;
+
+}
+
+
+.buttonElement{
+
+    width: 30px;
+    height: 30px;
+
+    border-style: none;
+    outline: none;
+    
+    cursor: pointer;
+
+    background: no-repeat;
+
+}
+
+
+#bodyDiv{
+
+    background-color: transparent;
+
+    display: flex;  
+    flex-direction: column;
+    
+}
+
+
+#contentDiv{
+
+    background-color: transparent;
+    display: flex; 
+    flex-shrink: 0;
+
+    margin-left: 10px;
+    margin-top: 20px;
+
+}
+
+
+#contentElement{
+
+   background-color: transparent;
+
+   font-family: Verdana, Geneva, sans-serif;
+   font-weight: lighter;
+   font-size: 16px;
+
+   line-height: 20px;
+
+}
+
+
+#imgesDiv{
+
+    background-color: transparent;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    margin-top: 50px;
+
+}
+
+
+#imgBox{
+
+    background-color: transparent;
+
+    margin-left: 15px;
+
+}
+
+
+.imgElement{
+
+   width: 200px;
+   height: 200px;
+
+   background-size: 100% 100%;
+   background-repeat: no-repeat;
+   
+}
+
+

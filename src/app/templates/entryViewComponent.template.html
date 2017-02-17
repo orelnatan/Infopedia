@@ -1,0 +1,34 @@
+
+
+    <div  id = "mainWrapper" >
+
+        <div id = "headerDiv" >     
+        
+            <div id = "titleDiv" >  <label id = "titleElement" >  {{ entry.entryTitle }}  </label>  </div>
+            
+            <div id = "optionsDiv" >  
+
+                <div id = "optionBox" > <button  class = "buttonElement"  (click) = 'goBack()'  [ngStyle] = "{'background-image': 'url(' + notifications.goBackButtonImgUrl + ')'}" >     </button>  </div>
+                <div id = "optionBox" >  </div>
+                <div id = "optionBox" >  </div>
+
+            </div>
+        
+        </div>
+
+        <div id = "bodyDiv" >
+
+            <div  id = "contentDiv" >  <label id = "contentElement" > {{ entryContent }} </label>  </div>        
+            
+            <div id = "imgesDiv">  
+
+                <div id = "imgBox" > <img  class = "imgElement" [src] = "notifications.emptyImg"  />  </div>
+                <div id = "imgBox" > <img  class = "imgElement" [src] = "notifications.emptyImg"  />  </div>
+                <div id = "imgBox" > <img  class = "imgElement" [src] = "notifications.emptyImg"  />  </div>
+
+            </div>
+
+        </div>
+
+    </div>
+

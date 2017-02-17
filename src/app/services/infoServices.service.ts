@@ -7,11 +7,12 @@ import    { Entry }             from '../classes/entry';
 @Injectable()
 export class InfoServices {
 
-
+    
     constructor(private http:Http) {
         
 
     }
+
 
     getDataFromServer(keyWord: string){
 
@@ -52,7 +53,7 @@ export class InfoServices {
        let urls             = data[3];
        
        let entrys: Entry[] = [];
-       let id:number = 0;
+       let id: number = 0;
 
        for(let i in titles){
 
@@ -63,7 +64,6 @@ export class InfoServices {
        }
 
        return entrys; 
-
      }
 
 

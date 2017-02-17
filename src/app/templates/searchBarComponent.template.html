@@ -1,0 +1,26 @@
+
+
+<div id = "mainWrapper" >
+
+    <div id = "headerDiv" >
+
+        <div id = "headerImgDiv" > <img  id = "headerImgElement" [src] = "notifications.searchImgUrl"  /> </div>
+
+        <div id = "headerUserPanelDiv" >
+
+            <div id = "headerTitleDiv" > <label id = "headerTitleElement" >  {{notifications.titleText}}  </label>     </div>
+
+            <div id = "headerInputDiv" > <input id = "headerInputBox"  placeholder = {{notifications.boxHolderText}}  (keyup) = 'getUserInput(inputBoxRef)'  #inputBoxRef >  </div>
+
+        </div>
+
+    </div>
+
+    <div id = "entrysListComponentDiv" >
+
+        <entrys-list  [entrysList] = 'entrys'  [searchKey] = 'searchName'  > </entrys-list>
+        
+    </div>
+
+</div>
+
