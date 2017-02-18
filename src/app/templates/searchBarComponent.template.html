@@ -10,7 +10,7 @@
 
             <div id = "headerTitleDiv" > <label id = "headerTitleElement" >  {{notifications.titleText}}  </label>     </div>
 
-            <div id = "headerInputDiv" > <input id = "headerInputBox"  placeholder = {{notifications.boxHolderText}}  (keyup) = 'getUserInput(inputBoxRef)'  #inputBoxRef >  </div>
+            <div id = "headerInputDiv" > <input  id = "headerInputBox"  placeholder = {{notifications.boxHolderText}}  [(ngModel)] = 'defaultValue'   (keyup) = 'getUserInput(inputBoxRef.value)'  #inputBoxRef >  </div>
 
         </div>
 
@@ -18,7 +18,7 @@
 
     <div id = "entrysListComponentDiv" >
 
-        <entrys-list  [entrysList] = 'entrys'  [searchKey] = 'searchName'  > </entrys-list>
+        <entrys-list  [setEntrysList] = 'entrys'  [searchKey] = 'searchName'  > </entrys-list>
         
     </div>
 

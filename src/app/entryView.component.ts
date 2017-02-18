@@ -1,7 +1,6 @@
 
 import { Component, Input, OnInit }        from '@angular/core';
-import { ActivatedRoute, Params }          from '@angular/router';
-import { Location }                        from '@angular/common';
+import { ActivatedRoute, Params, Router }  from '@angular/router';
 import { Entry }                           from './classes/entry';
 import { InfoServices }                    from './services/infoServices.service';
 import                                          'rxjs/add/operator/switchMap';
@@ -21,6 +20,7 @@ export class EntryViewClass implements OnInit {
     notifications = {
 
        goBackButtonImgUrl:    'https://maxcdn.icons8.com/Color/PNG/24/Industry/return-24.png',
+       openWabButtonImgUrl:   'https://maxcdn.icons8.com/Color/PNG/24/Logos/internet_explorer-24.png',
        emptyImg:              'http://www.cross-drive.eu/public/sites/all/modules/media_gallery/images/empty_gallery.png'
 
     };
@@ -34,9 +34,9 @@ export class EntryViewClass implements OnInit {
     entryContent:   string = '';
 
 
-    constructor(private route:        ActivatedRoute, 
-                private location:     Location,
-                private infoServices: InfoServices){   
+    constructor(private route:          ActivatedRoute, 
+                private router:         Router,
+                private infoServices:   InfoServices){   
     }
 
 
@@ -47,7 +47,6 @@ export class EntryViewClass implements OnInit {
             this.searchKey  = params['searchKey'];
             this.subjectKey = params['subjectKey'];
             
-            console.log(this.searchKey);
             this.getEntryByKeyWord(this.subjectKey);
           
         });
@@ -86,9 +85,14 @@ export class EntryViewClass implements OnInit {
 
     goBack(){
     
-        this.location.back();
-
+        this.router.navigate(['/SearchBar', {subjectKey: this.subjectKey, searchKey: this.searchKey}]);
     }    
     
+
+    openWab(){
+
+        window.open(this.entry.entryUrl);
+
+    }
 
 }

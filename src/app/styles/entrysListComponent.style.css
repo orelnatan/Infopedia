@@ -23,7 +23,7 @@
 }
 
 
-#entryDiv{
+.entryDiv{
 
     background-color: #eee;
 
@@ -40,9 +40,16 @@
     transition-duration: 2s;
 }
 
-#entryDiv:hover{
+.entryDiv:hover{
     opacity: 0.5;
 }
+
+.lastSelected{
+
+    background-color: #D5D2D4;
+
+}
+
 
 
 #entryNameDiv{

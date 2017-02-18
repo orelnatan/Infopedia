@@ -1,7 +1,8 @@
-import { Component }        from '@angular/core';
-import { InfoServices }     from './services/infoServices.service';
-import { Entry }            from './classes/entry';
-import                           './operators/rxjs-operators';
+import { Component, OnInit }                  from '@angular/core';
+import { ActivatedRoute, Params, Router }     from '@angular/router';
+import { InfoServices }                       from './services/infoServices.service';
+import { Entry }                              from './classes/entry';
+import                                             './operators/rxjs-operators';
 
 
 @Component({
@@ -13,7 +14,7 @@ import                           './operators/rxjs-operators';
 })
 
 
-export class SearchBarClass  {
+export class SearchBarClass implements OnInit  {
 
 
     notifications = {
@@ -24,22 +25,40 @@ export class SearchBarClass  {
 
   };
 
-  entrys:     Entry[] = [];
-  searchName: string = '';
+  entrys:         Entry[] = [];
+  searchName:     string = '';
+  
+  defaultValue:   string = '';
 
-  constructor(private infoServices: InfoServices){
+  
+  constructor(private route:          ActivatedRoute, 
+              private router:         Router,
+              private infoServices:   InfoServices){   
+  }
+
+
+  ngOnInit(): void{
+
+       this.route.params.subscribe(params => {
+        
+          this.defaultValue  = params['searchKey'];
+          
+          if(this.defaultValue != undefined)
+              this.getUserInput(this.defaultValue);
+            
+      });
 
   }
 
 
-  getUserInput(reference: any){
+  getUserInput(searchName: string){
 
-    this.searchName = reference.value;
-    this.infoServices.getDataFromServer(this.searchName).subscribe((response) => {
-                       
-        this.entrys = response;
-        
-    });
+      this.searchName = searchName; 
+      this.infoServices.getDataFromServer(this.searchName).subscribe((response) => {
+                        
+          this.entrys = response;
+          
+      });
 
   }
 
